@@ -9,13 +9,15 @@ import { ListAnnoncesComponent } from './list-annonces/list-annonces.component';
 import { EstimationCoutComponent } from './estimation-cout/estimation-cout.component';
 import { AnnonceService } from './services/annonce.service';
 import { FormsModule }   from '@angular/forms';
+import { PageComponent } from './page/page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AnnoncesComponent,
     ListAnnoncesComponent,
-    EstimationCoutComponent
+    EstimationCoutComponent,
+    PageComponent
   ],
   imports: [
     BrowserModule,

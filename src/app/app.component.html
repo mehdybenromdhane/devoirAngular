@@ -1,1 +1,19 @@
+<div class="container">
+<h1>Les articles du jour</h1>
+<div class="form-group">
+
+<label>Veuillez saisir le nombre d'articles à afficher dans la page</label>
+
+<input [(ngModel)]="nbArticles" type="number" class="form-control">
+
+
+
+
+  
+
+</div>
+<app-page [article] = "article" [nbArticles]=nbArticles></app-page>
+<br> <br> <br>
 <app-annonces></app-annonces>
+
+</div>

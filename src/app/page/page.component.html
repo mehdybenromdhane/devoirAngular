@@ -1,0 +1,28 @@
+<div class ="container">
+  <table class="table" >
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">titre</th>
+          <th scope="col">contenu</th>
+          <th scope="col">auteur</th>
+          <th scope="col">date</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let a of article ; let i= index" >
+       
+      
+        <tr *ngIf="nbArticles>i">
+         
+          <td>{{a.titre}}</td>
+          <td>{{a.contenu}}</td>
+          <td>{{a.auteur}}</td>
+          <td>{{a.date}}</td>
+   
+        </tr>
+      
+      </tbody>
+    </table>
+    
+
+   
+  </div>
