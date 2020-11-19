@@ -1,0 +1,29 @@
+
+<div class ="container">
+    <table class="table" >
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">titre</th>
+            <th scope="col">description</th>
+            <th scope="col">position</th>
+            <th scope="col">etat</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let a of annoncesList">
+          <tr  *ngIf="a.etat !='annulé'" [ngStyle]="{'background-color':a.etat=='confirmé'?'green':'orange'}">
+           
+            <td>{{a.titre}}</td>
+            <td>{{a.description}}</td>
+            <td>{{a.position}}</td>
+            <td>{{a.etat}}</td>
+     
+          </tr>
+         
+        </tbody>
+      </table>
+      
+
+     
+    </div>
+
+    

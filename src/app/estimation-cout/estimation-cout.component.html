@@ -1,0 +1,50 @@
+
+<div class="container">
+<h2>Pour estimer le cout de votre annonce , veuillez saisir
+    la position souhaitée de votre annonce(haut,bas) et le nombre de caractères de la description
+
+</h2>
+
+<p>notez bien les 2 champs sont obligatoires</p>
+
+<form  class="container" #f="ngForm">
+
+
+    <div class="form-group">
+
+<label> Position souhaitée</label> 
+<select [(ngModel)]="position" name="position" #p="ngModel" required>
+    <option value="">----choisir position -----</option>
+
+    <option  value="vide">vide</option>
+    <option value="haut">haut</option>
+    <option value="bas">bas</option>
+    <option *ngFor="let p of position" [value]="p"></option>
+
+    </select>
+</div>
+
+<div class="alert alert-danger" *ngIf="p.invalid && p.touched">
+    position is required
+  </div>
+
+<div class="form-group">
+
+    <label> Nombre de caractère</label>
+
+    <input type="number" class="form-control" name="nbr" [(ngModel)]="number" style="width: 20%;" #n="ngModel" required>
+</div>
+<div class="alert alert-danger" *ngIf="n.invalid && n.touched">
+    number  is required
+  </div>
+  <div class="alert alert-danger" *ngIf="number>60">
+    number ne depasse pas 60
+  </div>
+
+
+    <button  (click)="estimer()" class="btn btn-primary"> estimer</button>
+
+   <h3>{{cout}} </h3> 
+</form>
+
+</div>
